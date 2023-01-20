@@ -36,7 +36,7 @@ public class Board {
     }
 
     public void display() {
-        Display displayClient = new DisplayClient();
+        Display displayClient = new DisplayImpl();
         displayClient.display(this.spots);
     }
 }

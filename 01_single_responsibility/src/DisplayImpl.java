@@ -1,6 +1,6 @@
 import java.util.List;
 
-public class DisplayClient implements Display {
+public class DisplayImpl implements Display {
 
   @Override
   public void display(List<String> spots) {
