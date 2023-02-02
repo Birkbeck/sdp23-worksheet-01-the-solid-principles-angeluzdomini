@@ -1,19 +1,15 @@
 public class Greeter {
-    String formality;
+    private Relationship relationship;
 
-    public String greet() {
-        if (this.formality == "formal") {
-            return "Good evening";
-        } else if (this.formality == "casual") {
-            return "Goodday?";
-        } else if (this.formality == "intimate") {
-            return "Hello darling!";
-        } else {
-            return "Hello.";
-        }
+    public Greeter() {
+        this(() -> "Hello.");
     }
 
-    public void setFormality(String formality) {
-        this.formality = formality;
+    public Greeter(Relationship relationship) {
+        this.relationship = relationship;
+    }
+
+    public String greet() {
+        return this.relationship.greet();
     }
 }
