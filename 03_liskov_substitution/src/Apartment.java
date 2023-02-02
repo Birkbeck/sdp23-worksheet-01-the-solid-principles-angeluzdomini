@@ -1,6 +1,22 @@
 abstract sealed class Apartment  permits PenthouseSuite, Studio {
-    int squareFootage;
-    int numberOfBedrooms;
+    private int squareFootage;
 
-    abstract void setSquareFootage(int sqft);
+    private int numberOfBedroom;
+
+
+    public int getSquareFootage() {
+        return squareFootage;
+    }
+
+    public void setSquareFootage(int squareFootage) {
+        this.squareFootage = squareFootage;
+    }
+
+    public int getNumberOfBedroom() {
+        return numberOfBedroom;
+    }
+
+    public void setNumberOfBedroom(int numberOfBedroom) {
+        this.numberOfBedroom = numberOfBedroom;
+    }
 }

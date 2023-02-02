@@ -10,7 +10,7 @@ public class UnitUpgraderTest {
         UnitUpgrader upgrader = new UnitUpgrader();
         upgrader.upgrade(penthouse);
 
-        assertEquals(1540, penthouse.squareFootage);
+        assertEquals(1540, penthouse.getSquareFootage());
     }
 
     @Test
@@ -19,7 +19,7 @@ public class UnitUpgraderTest {
         UnitUpgrader upgrader = new UnitUpgrader();
         upgrader.upgrade(penthouse);
 
-        assertEquals(5, penthouse.numberOfBedrooms);
+        assertEquals(5, penthouse.getNumberOfBedroom());
     }
 
     @Test
@@ -29,7 +29,7 @@ public class UnitUpgraderTest {
         UnitUpgrader upgrader = new UnitUpgrader();
         upgrader.upgrade(studio);
 
-        assertEquals(590, studio.squareFootage);
+        assertEquals(590, studio.getSquareFootage());
     }
 
     @Test
@@ -38,6 +38,6 @@ public class UnitUpgraderTest {
         UnitUpgrader upgrader = new UnitUpgrader();
         upgrader.upgrade(studio);
 
-        assertEquals(0, studio.numberOfBedrooms);
+        assertEquals(0, studio.getNumberOfBedroom());
     }
 }
