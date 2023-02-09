@@ -1,3 +1,4 @@
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -9,6 +10,13 @@ public class PenguinTest {
         Penguin penguin = new Penguin(5);
         penguin.molt();
         assertEquals(4, penguin.numberOfFeathers);
+    }
+
+    @Disabled("method fly removed")
+    @Test
+    public void testItCantActuallyFly() {
+        Penguin penguin = new Penguin(5);
+        //assertThrows(UnsupportedOperationException.class, penguin::fly);
     }
 
     @Test
